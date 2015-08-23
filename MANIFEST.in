@@ -1,0 +1,11 @@
+# Informational files
+include README.rst
+include LICENSE
+
+# Exclude any compile Python files (most likely grafted by tests/ directory).
+global-exclude *.pyc
+
+# Setup-related things
+include requirements.txt
+include setup.py
+include tox.ini

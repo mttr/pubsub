@@ -1,5 +1,8 @@
 import setuptools
 
+with open('requirements.txt') as f:
+    requires = [line.strip() for line in f.readlines()]
+
 setuptools.setup(
     name="pubsub",
     version="0.1.0",
@@ -13,7 +16,7 @@ setuptools.setup(
 
     packages=setuptools.find_packages(),
 
-    install_requires=[],
+    install_requires=requires,
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -23,4 +26,10 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
     ],
+
+    entry_points={
+        'console_scripts': [
+            'pubsubserve = pubsub.net:main',
+        ]
+    }
 )

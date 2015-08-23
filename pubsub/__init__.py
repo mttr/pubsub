@@ -3,3 +3,5 @@
 __version__ = '0.1.0'
 __author__ = 'Matt Rasmus <mattr@zzntd.com>'
 __all__ = []
+
+from .net import PubSub
